@@ -1313,8 +1313,8 @@ void CIRCSock::ConnectionRefused() {
 
 void CIRCSock::ReachedMaxBuffer() {
     DEBUG(GetSockName() << " == ReachedMaxBuffer()");
-    m_pNetwork->PutStatus("Received a too long line from the IRC server!");
-    Quit();
+    m_pNetwork->PutStatus("Received a too long line from the IRC server! Should quit...");
+    //Quit();
 }
 
 void CIRCSock::ParseISupport(const CMessage& Message) {
